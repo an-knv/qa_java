@@ -44,10 +44,8 @@ class LionTest {
             assertFalse(l.doesHaveMane());
         });
         assertThrows(Exception.class,() ->
-        {
-            new Lion("Пол", feline);
-
-        });
+            new Lion("Пол", feline)
+        );
     }
 
     @Test
