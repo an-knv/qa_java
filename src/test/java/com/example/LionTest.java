@@ -22,11 +22,11 @@ class LionTest {
             Lion l = new Lion("Самец", feline);
             assertAll(
                     () -> Mockito.when(feline.getKittens()).thenReturn(2),
-                    () -> assertEquals(l.getKittens(),2)
+                    () -> assertEquals(2, l.getKittens())
             );
             assertAll(
                     () -> Mockito.when(feline.getKittens()).thenReturn(5),
-                    () -> assertEquals(l.getKittens(),5)
+                    () -> assertEquals(5, l.getKittens())
             );
         });
     }
@@ -45,7 +45,7 @@ class LionTest {
         });
         assertThrows(Exception.class,() ->
         {
-            Lion l = new Lion("Пол", feline);
+            new Lion("Пол", feline);
 
         });
     }
